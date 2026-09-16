@@ -1,5 +1,7 @@
 # Steve Knox · QA Automation Portfolio
 
+[![QA Automation Tests](https://github.com/sknox698-del/qa-automation-playwright-typescript/actions/workflows/qa.yml/badge.svg)](https://github.com/sknox698-del/qa-automation-playwright-typescript/actions/workflows/qa.yml)
+
 **Playwright + TypeScript | UI Testing | API Testing | Regression Testing | Cross-Browser QA**
 
 A portfolio QA automation project built around **Northstar Shop**, a self-contained fictional e-commerce application. The suite demonstrates practical test design, browser automation, API validation, regression detection, edge-case testing, reusable test architecture, and failure investigation.
