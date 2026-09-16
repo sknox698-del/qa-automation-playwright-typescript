@@ -1,0 +1,204 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=chromium"
+    ],
+    "configFile": "C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\playwright.config.ts",
+    "rootDir": "C:/Users/Steven/Documents/Codex/2026-09-16/referenced-chatgpt-conversation-this-is-an/outputs/steve-qa-automation/evidence-demo",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Steven/Documents/Codex/2026-09-16/referenced-chatgpt-conversation-this-is-an/outputs/steve-qa-automation/failure-demo-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "C:/Users/Steven/Documents/Codex/2026-09-16/referenced-chatgpt-conversation-this-is-an/outputs/steve-qa-automation/evidence-demo",
+        "testIgnore": [],
+        "testMatch": [
+          "**/api/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Steven/Documents/Codex/2026-09-16/referenced-chatgpt-conversation-this-is-an/outputs/steve-qa-automation/failure-demo-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Steven/Documents/Codex/2026-09-16/referenced-chatgpt-conversation-this-is-an/outputs/steve-qa-automation/evidence-demo",
+        "testIgnore": [],
+        "testMatch": [
+          "**/e2e/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Steven/Documents/Codex/2026-09-16/referenced-chatgpt-conversation-this-is-an/outputs/steve-qa-automation/failure-demo-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Steven/Documents/Codex/2026-09-16/referenced-chatgpt-conversation-this-is-an/outputs/steve-qa-automation/evidence-demo",
+        "testIgnore": [],
+        "testMatch": [
+          "**/e2e/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "failure-demo-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "failure-demo-report/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run start",
+      "url": "http://127.0.0.1:4187/api/health",
+      "reuseExistingServer": false,
+      "timeout": 20000
+    }
+  },
+  "suites": [
+    {
+      "title": "e2e\\price-regression.spec.ts",
+      "file": "e2e/price-regression.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "DEMO-01 detects an intentionally injected one-cent price regression",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6108,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('total')\nExpected: \u001b[32m\"€22.9\u001b[7m5\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"€22.9\u001b[7m6\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByTestId('total') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('total')\u001b[22m\n\u001b[2m    14 × locator resolved to <strong data-testid=\"total\">€22.96</strong>\u001b[22m\n\u001b[2m       - unexpected value \"€22.96\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('total')\nExpected: \u001b[32m\"€22.9\u001b[7m5\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"€22.9\u001b[7m6\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByTestId('total') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('total')\u001b[22m\n\u001b[2m    14 × locator resolved to <strong data-testid=\"total\">€22.96</strong>\u001b[22m\n\u001b[2m       - unexpected value \"€22.96\"\u001b[22m\n\n    at C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\evidence-demo\\e2e\\price-regression.spec.ts:12:43",
+                    "location": {
+                      "file": "C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\evidence-demo\\e2e\\price-regression.spec.ts",
+                      "column": 43,
+                      "line": 12
+                    },
+                    "snippet": "  10 |   await shop.open(); await shop.add('Trail Bottle'); await shop.viewCart();\n  11 |   // Deliberately fails: real UI displays €22.96 after the injected price change.\n> 12 |   await expect(page.getByTestId('total')).toHaveText('€22.95');\n     |                                           ^\n  13 | });\n  14 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\evidence-demo\\e2e\\price-regression.spec.ts",
+                        "column": 43,
+                        "line": 12
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('total')\nExpected: \u001b[32m\"€22.9\u001b[7m5\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"€22.9\u001b[7m6\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByTestId('total') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('total')\u001b[22m\n\u001b[2m    14 × locator resolved to <strong data-testid=\"total\">€22.96</strong>\u001b[22m\n\u001b[2m       - unexpected value \"€22.96\"\u001b[22m\n\n\n  10 |   await shop.open(); await shop.add('Trail Bottle'); await shop.viewCart();\n  11 |   // Deliberately fails: real UI displays €22.96 after the injected price change.\n> 12 |   await expect(page.getByTestId('total')).toHaveText('€22.95');\n     |                                           ^\n  13 | });\n  14 |\n    at C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\evidence-demo\\e2e\\price-regression.spec.ts:12:43"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-16T06:32:11.896Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\failure-demo-results\\e2e-price-regression-DEMO--793f6-d-one-cent-price-regression-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\failure-demo-results\\e2e-price-regression-DEMO--793f6-d-one-cent-price-regression-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\failure-demo-results\\e2e-price-regression-DEMO--793f6-d-one-cent-price-regression-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Steven\\Documents\\Codex\\2026-09-16\\referenced-chatgpt-conversation-this-is-an\\outputs\\steve-qa-automation\\evidence-demo\\e2e\\price-regression.spec.ts",
+                    "column": 43,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a0b48d1d64f726181795-996fdf3ebc46453160c3",
+          "file": "e2e/price-regression.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-16T06:32:08.378Z",
+    "duration": 10867.575,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
