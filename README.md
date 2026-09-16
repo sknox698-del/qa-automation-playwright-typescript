@@ -37,6 +37,18 @@ This is a **personal, AI-assisted portfolio project**, not paid client work or t
 ## Project Structure
 
 ```text
+
+## Quick Start
+
+### Requirements
+
+- Node.js 22.13+ or Node.js 24+
+
+### Install dependencies
+
+```sh
+npm ci
+npx playwright install chromium firefox
 .github/workflows/qa.yml       GitHub Actions workflow for automated QA checks
 demo/
   server.mjs                  Local HTTP API, demo sessions, order validation
