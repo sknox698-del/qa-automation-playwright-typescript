@@ -1,0 +1,31 @@
+$kind: http-request
+name: POST Malformed JSON
+description: ""
+url: http://127.0.0.1:4187/api/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"steve@example.test\",\r
+
+    \  \"password\": \"DemoPass123!\""
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 400\", function () {\r
+
+      \    pm.response.to.have.status(400);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"Invalid JSON error is returned\", function () {\r
+
+      \    const json = pm.response.json();\r
+
+      \    pm.expect(json.error).to.eql(\"Invalid JSON\");\r
+
+      });"
+    language: text/javascript
+order: 4503599624417120

@@ -1,0 +1,54 @@
+$kind: http-request
+name: POST Order - Invalid Quantity
+description: ""
+url: http://127.0.0.1:4187/api/orders
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"items\": [\r
+
+    \    {\r
+
+    \      \"productId\": \"bag\",\r
+
+    \      \"quantity\": 0\r
+
+    \    }\r
+
+    \  ],\r
+
+    \  \"shipping\": {\r
+
+    \    \"name\": \"Steve Demo\",\r
+
+    \    \"email\": \"steve@example.test\",\r
+
+    \    \"postcode\": \"10115\"\r
+
+    \  }\r
+
+    }"
+scripts:
+  - type: beforeRequest
+    code: ""
+    language: text/javascript
+  - type: afterResponse
+    code: "pm.test(\"Status code is 400\", function () {\r
+
+      \    pm.response.to.have.status(400);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"Error message is correct\", function () {\r
+
+      \    const json = pm.response.json();\r
+
+      \    pm.expect(json.error).to.eql(\"Invalid item or quantity\");\r
+
+      });"
+    language: text/javascript
+order: 4503593793094426

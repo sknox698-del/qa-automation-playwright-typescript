@@ -1,0 +1,25 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:4187/api/products
+method: GET
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 200\", function () {\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"Products array is returned\", function () {\r
+
+      \    const json = pm.response.json();\r
+
+      \    pm.expect(json.products).to.be.an(\"array\");\r
+
+      \    pm.expect(json.products.length).to.be.above(0);\r
+
+      });"
+    language: text/javascript
+order: 1789551290981

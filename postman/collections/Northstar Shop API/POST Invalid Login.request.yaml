@@ -1,0 +1,32 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:4187/api/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"steve@example.test\",\r
+
+    \  \"password\": \"WrongPassword\"\r
+
+    }"
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 401\", function () {\r
+
+      \    pm.response.to.have.status(401);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"Invalid login error is returned\", function () {\r
+
+      \    const json = pm.response.json();\r
+
+      \    pm.expect(json.error).to.eql(\"Invalid email or password\");\r
+
+      });"
+    language: text/javascript
+order: 2028481905136316
