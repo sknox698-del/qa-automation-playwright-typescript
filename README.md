@@ -23,6 +23,32 @@ A portfolio QA automation project built around **Northstar Shop**, a self-contai
 | Postman API testing | 7 requests with 14 automated assertions passing |
 | CI/CD | Verified GitHub Actions workflow running the full QA suite |
 
+## QA Evidence
+
+### Playwright Test Report
+
+The automated suite covers UI, API, regression, edge-case and cross-browser scenarios.
+
+![Playwright QA report](docs/images/qa-playwright-report.png)
+
+### Full QA Test Run
+
+The complete quality gate runs linting, TypeScript checks, API tests and browser tests, with 83 passing test executions.
+
+![QA test run](docs/images/qa-test-run.png)
+
+### Regression Failure Detection
+
+A controlled price regression demonstrates that the suite detects changed behavior, reporting €22.95 expected versus €22.96 received.
+
+![Regression failure demonstration](docs/images/qa-failure-demo.png)
+
+### Postman API Validation
+
+The Postman collection was executed through Newman, with 14 automated assertions passing.
+
+![Postman API results](docs/images/qa-postman-results.png)
+
 ## What This Project Demonstrates
 
 - End-to-end testing of realistic user workflows
